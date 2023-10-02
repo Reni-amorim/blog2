@@ -11,7 +11,7 @@ set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
 ## Dont change #
-set :rvm1_ruby_version, "ruby-2.0.0-p247"
+set :rvm1_ruby_version, "ruby-3.2.2"
 set :default_environment, {
   'PATH'                    => "#{rvm_path}/gems/ruby/3.2.2/bin:#{rvm_bin_path}/bin:$PATH",
   'RUBY_VERSION'    => '3.2.2',
