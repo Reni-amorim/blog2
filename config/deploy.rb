@@ -12,13 +12,6 @@ set :puma_workers,    0
 
 ## Dont change #
 set :rvm1_ruby_version, "ruby-3.2.2"
-set :default_environment, {
-  'PATH'                    => "#{rvm_path}/gems/ruby/3.2.2/bin:#{rvm_bin_path}/bin:$PATH",
-  'RUBY_VERSION'    => '3.2.2',
-  'GEM_HOME'        => "#{rvm_path}/gems/#{rvm_ruby_string}",
-  'GEM_PATH'        => "#{rvm_path}/gems/#{rvm_ruby_string}",
-  'BUNDLE_PATH'     => "#{rvm_path}/gems/#{rvm_ruby_string}"
-}
 
 set :pty,             true
 set :use_sudo,        false
