@@ -13,7 +13,6 @@ set :puma_workers,    0
 ## Dont change #
 set :rvm_map_bins, %w{gem rake ruby rails bundle}
 set :rvm1_ruby_version, "3.2.2"
-set :default_env, { rvm_bin_path: '~/.rvm/bin' }
 set :pty,             true
 set :use_sudo,        false
 set :stage,           :production
