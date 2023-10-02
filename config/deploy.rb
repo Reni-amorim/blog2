@@ -11,7 +11,15 @@ set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
 ## Dont change #
-set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"") # Read from local system
+set :rvm1_ruby_version, "ruby-2.0.0-p247"
+set :default_environment, {
+  'PATH'                    => "#{rvm_path}/gems/ruby/3.2.2/bin:#{rvm_bin_path}/bin:$PATH",
+  'RUBY_VERSION'    => '3.2.2',
+  'GEM_HOME'        => "#{rvm_path}/gems/#{rvm_ruby_string}",
+  'GEM_PATH'        => "#{rvm_path}/gems/#{rvm_ruby_string}",
+  'BUNDLE_PATH'     => "#{rvm_path}/gems/#{rvm_ruby_string}"
+}
+
 set :pty,             true
 set :use_sudo,        false
 set :stage,           :production
@@ -27,7 +35,7 @@ set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
 set :bundle_jobs, 1
-set :rvm1_ruby_version, "ruby-2.0.0-p247"
+
 
 ## Defaults:
 # set :scm,           :git
