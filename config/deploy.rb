@@ -11,7 +11,7 @@ set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
 ## Dont change #
-set :default_env, { path: "/home/ubuntu/.nvm/versions/node/v12.0.0/bin" }
+set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"") # Read from local system
 set :pty,             true
 set :use_sudo,        false
 set :stage,           :production
