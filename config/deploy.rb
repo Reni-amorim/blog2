@@ -2,7 +2,7 @@
 lock "~> 3.17.3"
 
 # Change these
-server "18.231.157.78", :roles => [:app, :web, :db], :primary => true
+server "54.233.208.21", :roles => [:app, :web, :db], :primary => true
 
 set :repo_url,        'git@github.com:Reni-amorim/blog2.git'
 set :application,     'blog2'
