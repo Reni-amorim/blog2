@@ -1,6 +1,21 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+
+######## Capistrano gems
+
+group :development do
+    gem 'capistrano',         require: false
+    gem 'rvm1-capistrano3',   require: false
+    gem 'capistrano-rails',   require: false
+    gem 'capistrano-bundler', require: false
+    gem 'capistrano3-puma',   require: false
+end
+
+##### GEM PUMA JÁ EXISTE
+#gem 'puma'
+
+
 ruby "3.2.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
