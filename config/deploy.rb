@@ -5,7 +5,7 @@ lock "~> 3.17.3"
 server "18.230.188.136", :roles => [:app, :web, :db], :primary => true
 
 set :repo_url,        'git@github.com:Reni-amorim/blog2.git'
-set :application,     ‘blog2'
+set :application,     'blog2'
 set :user,            'deploy'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
