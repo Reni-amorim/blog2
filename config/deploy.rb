@@ -11,7 +11,7 @@ set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
 ## Dont change #
-set :rvm1_ruby_version, "ruby-3.2.2"
+set :rvm1_ruby_version, "3.2.2"
 set :default_env, { path: "/opt/ruby/bin:$PATH" }
 set :pty,             true
 set :use_sudo,        false
