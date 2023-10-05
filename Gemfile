@@ -15,6 +15,8 @@ end
 ##### GEM PUMA JÁ EXISTE
 #gem 'puma'
 
+#gem ssh kit to use password 
+gem 'sshkit-sudo'
 
 ruby "3.2.2"
 
