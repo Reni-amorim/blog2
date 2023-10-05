@@ -16,7 +16,7 @@ set :rvm1_ruby_version, "3.2.2"
 set :default_env, { 'SECRET_KEY_BASE' => 'b46e34f7401d6c2d2caa842d6b42d1bb5520b263052042e408e2f7d7b7a32af63622699fe65d3d816b471a15e45a3a396fd57f15002d065638fd1b65830395c9' }
 set :linked_files, fetch(:linked_files, []).push('config/credentials/production.key')
 set :pty,             true
-set :use_sudo,        true
+set :use_sudo,        false
 set :stage,           :production
 set :deploy_via,      :remote_cache
 set :deploy_to,       "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
@@ -30,6 +30,7 @@ set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
 set :bundle_jobs, 1
+set :password, "!reni1324"
 
 
 ## Defaults:
