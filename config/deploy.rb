@@ -55,18 +55,7 @@ namespace :puma do
   before :start, :make_dirs
 end
 
-namespace :db do
-  desc 'Create the database'
-  task :create do
-    on roles(:db) do
-      within release_path do
-        with rails_env: fetch(:rails_env) do
-          execute :rake, 'db:create'
-        end
-      end
-    end
-  end
-end
+
 
 namespace :deploy do
   desc "Make sure local git is in sync with remote."
@@ -80,6 +69,20 @@ namespace :deploy do
     end
   end
   
+  
+  desc 'Create the database'
+  task :create_database do
+    on roles(:db) do
+      within release_path do
+        with rails_env: fetch(:rails_env) do
+          execute :rake, 'db:create'
+        end
+      end
+    end
+  end
+
+  before 'deploy:migrate', 'deploy:create_database'
+
 
 
   desc 'Initial Deploy'
