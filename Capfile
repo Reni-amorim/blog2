@@ -6,9 +6,10 @@ require 'capistrano/rails'
 require 'capistrano/bundler'
 require 'rvm1/capistrano3'
 require 'capistrano/puma'
+    install_plugin Capistrano::Puma  # Default puma tasks
     install_plugin Capistrano::Puma::Daemon
     install_plugin Capistrano::Puma::Systemd
-    #   install_plugin Capistrano::Puma  # Default puma tasks
+
     
 
 require 'sshkit/sudo'
