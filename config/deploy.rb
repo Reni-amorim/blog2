@@ -16,6 +16,9 @@ set :puma_workers,    0
 
 ## Dont change #
 set :default_env, { 'SECRET_KEY_BASE' => '62d798bbd3a0c1982a0100336203c26e80e2708a5c6e5adac26531382c67c1283feca8226e866bf8fabd0d29ed349ff7896cdd79eb9404fa90bcd052a2db103c' }
+# try to fix puma daemonized in version 5.2
+#/home/deploy/apps/blog2/rvm1scripts/rvm-auto.sh 3.2.2 bundle exec puma -C /home/deploy/apps/blog2/shared/puma.rb --daemon
+set :puma_command, "bundle exec puma -C #{release_path}/config/puma.rb -d"
 
 set :rvm_map_bins, %w{gem rake ruby rails bundle}
 set :rvm1_ruby_version, "3.2.2"
