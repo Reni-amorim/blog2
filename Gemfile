@@ -15,6 +15,9 @@ end
 ##### GEM PUMA JÁ EXISTE
 #gem 'puma'
 
+# Use the Puma web server [https://github.com/puma/puma]
+gem 'puma', '~> 5.2.0'
+
 #gem ssh kit to use password 
 gem 'sshkit-sudo'
 
@@ -29,8 +32,7 @@ gem "sprockets-rails"
 # Use mysql as the database for Active Record
 gem "mysql2", "~> 0.5"
 
-# Use the Puma web server [https://github.com/puma/puma]
-gem 'puma', '~> 5.2.0'
+
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
