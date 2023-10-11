@@ -14,9 +14,10 @@ set :puma_workers,    0
 set :puma_config,     '/home/vagrant/Desktop/blog2/config/puma.rb'
 
 ## Dont change #
+#set :default_env, { 'SECRET_KEY_BASE' => 'b46e34f7401d6c2d2caa842d6b42d1bb5520b263052042e408e2f7d7b7a32af63622699fe65d3d816b471a15e45a3a396fd57f15002d065638fd1b65830395c9' }
+
 set :rvm_map_bins, %w{gem rake ruby rails bundle}
 set :rvm1_ruby_version, "3.2.2"
-set :default_env, { 'SECRET_KEY_BASE' => 'b46e34f7401d6c2d2caa842d6b42d1bb5520b263052042e408e2f7d7b7a32af63622699fe65d3d816b471a15e45a3a396fd57f15002d065638fd1b65830395c9' }
 set :linked_files, fetch(:linked_files, []).push('config/credentials/production.key')
 set :pty,             true
 set :use_sudo,        false
