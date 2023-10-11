@@ -12,7 +12,7 @@ set :puma_workers,    0
 #try to set puma sock
 # The path to your Puma configuration file
 
-#set :puma_config,     '/home/vagrant/Desktop/blog2/config/puma.rb'
+set :puma_config,     '/home/vagrant/Desktop/blog2/config/puma.rb'
 
 ## Dont change #
 set :default_env, { 'SECRET_KEY_BASE' => '62d798bbd3a0c1982a0100336203c26e80e2708a5c6e5adac26531382c67c1283feca8226e866bf8fabd0d29ed349ff7896cdd79eb9404fa90bcd052a2db103c' }
