@@ -94,3 +94,4 @@ end
 
 #set config masterkey
 config.require_master_key = true
+end
