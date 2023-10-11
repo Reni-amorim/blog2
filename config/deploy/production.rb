@@ -1,6 +1,6 @@
 
 # In your Capistrano configuration file, e.g., config/deploy/production.rb
-set :rails_master_key, 'config/master.key'
+set :rails_master_key, '/home/deploy/apps/blog2/current/config/master.key'
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
