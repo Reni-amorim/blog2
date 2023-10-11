@@ -11,19 +11,21 @@ set :puma_threads,    [4, 16]
 set :puma_workers,    0
 #try to set puma sock
 # The path to your Puma configuration file
-set :puma_config,     '/home/vagrant/Desktop/blog2/config/puma.rb'
+
+#set :puma_config,     '/home/vagrant/Desktop/blog2/config/puma.rb'
 
 ## Dont change #
-set :default_env, { 'SECRET_KEY_BASE' => 'b46e34f7401d6c2d2caa842d6b42d1bb5520b263052042e408e2f7d7b7a32af63622699fe65d3d816b471a15e45a3a396fd57f15002d065638fd1b65830395c9' }
+set :default_env, { 'SECRET_KEY_BASE' => '62d798bbd3a0c1982a0100336203c26e80e2708a5c6e5adac26531382c67c1283feca8226e866bf8fabd0d29ed349ff7896cdd79eb9404fa90bcd052a2db103c' }
 
 set :rvm_map_bins, %w{gem rake ruby rails bundle}
 set :rvm1_ruby_version, "3.2.2"
+#try solution secret keybase
 set :linked_files, fetch(:linked_files, []).push('config/credentials/production.key')
 set :pty,             true
 set :use_sudo,        false
 set :stage,           :production
 set :deploy_via,      :remote_cache
-set :deploy_to,       "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
+set :deploy_to,       "/home/#{fetch(:user)}/apps~/#{fetch(:application)}"
 set :puma_bind,       "unix://#{shared_path}/tmp/sockets/#{fetch(:application)}-puma.sock"
 set :puma_state,      "#{shared_path}/tmp/pids/puma.state"
 set :puma_pid,        "#{shared_path}/tmp/pids/puma.pid"
