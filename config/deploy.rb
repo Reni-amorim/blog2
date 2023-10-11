@@ -2,7 +2,7 @@
 lock "~> 3.17.3"
 
 # Change these
-server "18.228.170.74", :roles => [:app, :web, :db], :primary => true
+server "54.233.243.162", :roles => [:app, :web, :db], :primary => true
 
 set :repo_url,        'git@github.com:Reni-amorim/blog2.git'
 set :application,     'blog2'
@@ -12,7 +12,7 @@ set :puma_workers,    0
 #try to set puma sock
 # The path to your Puma configuration file
 
-set :puma_config,     '/home/vagrant/Desktop/blog2/config/puma.rb'
+#set :puma_config,     '/home/vagrant/Desktop/blog2/config/puma.rb'
 
 ## Dont change #
 set :default_env, { 'SECRET_KEY_BASE' => '62d798bbd3a0c1982a0100336203c26e80e2708a5c6e5adac26531382c67c1283feca8226e866bf8fabd0d29ed349ff7896cdd79eb9404fa90bcd052a2db103c' }
@@ -91,17 +91,7 @@ namespace :deploy do
 
   before 'deploy:migrate', 'deploy:create_database'
 
-  namespace :puma do
-    desc 'Create Directories for Puma Pids and Socket'
-    task :make_dirs do
-      on roles(:app) do
-        execute "mkdir #{shared_path}/tmp/sockets -p"
-        execute "mkdir #{shared_path}/tmp/pids -p"
-      end
-    end
-  
-    before 'deploy:starting', 'puma:make_dirs'
-  end
+
 
   desc 'Initial Deploy'
   task :initial do
